@@ -1,0 +1,101 @@
+.about {
+	@apply scroll-mt-40 mt-20;
+	@media (max-width: 1080px) {
+		@apply scroll-mt-24;
+	}
+	.containerAbout {
+		@apply cursor-default;
+
+		> h1 {
+			@apply text-3xl  text-center w-1/2 mx-auto mb-12;
+			@media (max-width: 768px) {
+				@apply text-2xl w-2/3;
+			}
+			@media (max-width: 425px) {
+				@apply text-xl w-4/5;
+			}
+			@media (max-width: 320px) {
+				@apply text-lg;
+			}
+		}
+
+		.elements {
+			@apply flex  justify-evenly flex-wrap;
+
+			@media (max-width: 1230px) {
+				@apply flex justify-center gap-20 items-center snap-start   mt-12 flex-wrap-reverse px-2;
+			}
+
+			@media (max-width: 876.98px) {
+				@apply gap-0 pb-10 mt-0;
+				height: 100%;
+			}
+			@media (max-width: 320px) {
+				@apply mx-0;
+				height: 100%;
+			}
+
+			.left_side {
+				@apply w-1/3 item-shadow p-5 rounded-3xl;
+				@media (max-width: 1230px) {
+					@apply w-1/2;
+				}
+				@media (max-width: 876px) {
+					@apply w-auto  mx-5;
+				}
+				> h2 {
+					@apply text-2xl  text-center  w-2/3 mx-auto font-semibold text-gray-500 mb-7;
+					@media (max-width: 425px) {
+						@apply text-xl;
+					}
+					@media (max-width: 320px) {
+						@apply text-base;
+					}
+				}
+				> p {
+					@apply text-xl  text-center;
+					@media (max-width: 768px) {
+						@apply text-lg;
+					}
+					@media (max-width: 425px) {
+						@apply text-base;
+					}
+					@media (max-width: 320px) {
+						@apply text-sm;
+					}
+				}
+			}
+
+			.right_side {
+				@apply w-1/3 flex flex-col items-center  item-shadow p-5 rounded-3xl;
+				@media (max-width: 1230px) {
+					@apply w-1/2;
+				}
+				@media (max-width: 876px) {
+					@apply w-auto mb-12 mx-5;
+				}
+				> h2 {
+					@apply text-2xl  text-center   font-semibold text-gray-500 mb-7;
+					@media (max-width: 425px) {
+						@apply text-xl;
+					}
+					@media (max-width: 320px) {
+						@apply text-base;
+					}
+				}
+				> p {
+					@apply text-xl  text-center;
+					@media (max-width: 768px) {
+						@apply text-lg;
+					}
+					@media (max-width: 425px) {
+						@apply text-base;
+					}
+					@media (max-width: 320px) {
+						@apply text-sm;
+					}
+				}
+			}
+		}
+	}
+}

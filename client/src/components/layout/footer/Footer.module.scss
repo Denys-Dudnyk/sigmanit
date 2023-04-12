@@ -1,0 +1,130 @@
+.footer {
+	background: rgba(255, 255, 255, 0.12);
+	backdrop-filter: blur(5px);
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+	@apply py-5;
+
+	.container {
+		@apply items-center w-auto;
+		max-width: 1536px;
+		width: 100%;
+		padding-left: 20px;
+		padding-right: 20px;
+		margin-left: auto;
+		margin-right: auto;
+
+		.row {
+			@apply flex flex-wrap-reverse;
+
+			.col_md_3 {
+				@apply text-center;
+				@media (max-width: 768px) {
+					@apply mt-5 mx-auto;
+				}
+				> a {
+					> img {
+						@apply mx-auto;
+					}
+				}
+
+				position: relative;
+				width: 100%;
+				min-height: 1px;
+
+				@media (min-width: 768px) {
+					flex: 0 0 25%;
+					max-width: 25%;
+				}
+			}
+
+			.col {
+				@apply relative;
+
+				width: 100%;
+
+				@media (min-width: 768px) {
+					flex-basis: 0;
+					flex-grow: 1;
+					max-width: 100%;
+				}
+				@media (max-width: 768px) {
+					@apply mb-5;
+				}
+
+				min-height: 1px;
+				padding-left: 20px;
+				.colTitle {
+					font-size: 24px;
+					border-bottom: 2px solid;
+					margin-bottom: 10px;
+					@media (max-width: 768px) {
+						@apply text-lg;
+					}
+					@media (max-width: 425px) {
+						@apply text-base;
+					}
+				}
+
+				.col_text {
+					> ul {
+						> li {
+							@apply pb-2 text-lg;
+							@media (max-width: 768px) {
+								@apply text-base;
+							}
+							@media (max-width: 425px) {
+								@apply text-sm;
+							}
+							> a {
+								@apply text-gray-600  transition-colors  relative hover:text-black;
+
+								&:before {
+									content: '';
+									@apply bg-black h-2.5 w-full top-full opacity-0;
+								}
+								&:after {
+									content: '';
+									@apply bg-black opacity-0 transition-opacity;
+									transition-delay: 0s;
+								}
+
+								&:hover {
+									&:before {
+										@apply absolute opacity-100;
+										animation: lineUp 0.4s ease forwards;
+									}
+									&:after {
+										@apply opacity-100;
+										transition-delay: 0.3s;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@keyframes lineUp {
+	0% {
+		transform-origin: 50% 100%;
+		transform: scale3d(1, 0.045, 1);
+	}
+
+	50% {
+		transform-origin: 50% 100%;
+		transform: scale3d(1, 1, 1);
+	}
+
+	51% {
+		transform-origin: 50% 0%;
+		transform: scale3d(1, 1, 1);
+	}
+
+	100% {
+		transform-origin: 50% 0%;
+		transform: scale3d(1, 0.045, 1);
+	}
+}

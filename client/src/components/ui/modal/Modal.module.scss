@@ -1,0 +1,17 @@
+.modal {
+	@apply fixed top-[5.2rem] right-1/2 z-10 bg-white w-full rounded-2xl p-5;
+	transform: translateX(50%);
+	min-height: 30rem;
+	max-width: 30rem;
+
+	> h3 {
+		@apply text-center text-2xl font-medium;
+	}
+	> svg {
+		@apply w-6 h-6 cursor-pointer ml-auto;
+	}
+}
+
+.modalOverlay {
+	@apply w-full h-screen absolute top-0 left-0 bottom-0 right-0 bg-gray-500 bg-opacity-60 z-4;
+}

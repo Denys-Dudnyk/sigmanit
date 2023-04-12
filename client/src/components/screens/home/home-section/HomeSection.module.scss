@@ -1,0 +1,64 @@
+.home {
+	@apply flex flex-col justify-center scroll-mt-40  items-center mx-auto w-1/2  h-screen my-0;
+
+	@media (max-width: 768px) {
+		@apply w-2/3;
+	}
+	@media (max-width: 680px) {
+		@apply w-3/4;
+	}
+	@media (max-width: 375px) {
+		@apply w-5/6;
+	}
+	.homeContainer {
+		@apply cursor-default;
+
+		max-width: var(--max-width);
+		margin-left: auto;
+		margin-right: auto;
+
+		> h1 {
+			@apply text-4xl  font-bold text-left;
+			@media (max-width: 1280px) {
+				@apply text-4xl;
+			}
+			@media (max-width: 1024px) {
+				@apply text-3xl;
+			}
+			@media (max-width: 680px) {
+				@apply text-2xl;
+			}
+			@media (max-width: 460px) {
+				line-height: 1.75rem;
+			}
+		}
+
+		> h2 {
+			@apply text-2xl  mt-1 mb-7 text-gray-500 text-left;
+			@media (max-width: 1280px) {
+				@apply text-xl;
+			}
+			@media (max-width: 680px) {
+				@apply text-lg;
+			}
+			@media (max-width: 460px) {
+				@apply text-base;
+			}
+			@media (max-width: 320px) {
+				@apply text-sm;
+			}
+		}
+
+		> a {
+			> button {
+				@apply text-lg uppercase font-semibold py-2 px-6 border border-violet bg-violet text-white rounded-md text-center transition-all hover:scale-110;
+				@media (max-width: 460px) {
+					@apply text-base;
+				}
+				@media (max-width: 320px) {
+					@apply py-1 px-5 text-sm;
+				}
+			}
+		}
+	}
+}

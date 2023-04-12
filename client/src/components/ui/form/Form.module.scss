@@ -1,0 +1,15 @@
+.form {
+	> p {
+		@apply text-sm text-gray-500 mt-4 text-center;
+		> a {
+			@apply px-1 text-violet transition-colors hover:text-[#5226F7FF];
+		}
+	}
+
+	.formButton {
+		@apply block w-20 h-10 bg-black text-white mx-auto mt-10 font-medium rounded-xl transition-transform;
+		&:hover {
+			transform: translateY(-5px);
+		}
+	}
+}

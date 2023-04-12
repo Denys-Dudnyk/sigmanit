@@ -1,0 +1,28 @@
+.navContainer {
+	@apply flex items-center;
+
+	> span {
+		@apply hidden;
+		@media (max-width: 950px) {
+			@apply block ml-4;
+		}
+	}
+}
+
+.header {
+	background: rgba(255, 255, 255, 0.12);
+	backdrop-filter: blur(5px);
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+	@apply items-center p-4 z-4 fixed   top-0 left-0 w-full;
+
+	.container {
+		@apply flex  justify-between items-center;
+		max-width: 1536px;
+
+		padding-left: 20px;
+		padding-right: 20px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}

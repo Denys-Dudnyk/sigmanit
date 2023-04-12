@@ -1,0 +1,10 @@
+.selectContainer {
+	@apply relative mt-5 animate-fade py-2;
+	> label {
+		@apply block;
+
+		> span {
+			@apply text-xs uppercase text-gray-600 block mb-1;
+		}
+	}
+}

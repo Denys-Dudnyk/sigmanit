@@ -1,0 +1,13 @@
+.sectionContainer {
+	@apply flex flex-col justify-center items-center my-52;
+
+	&:nth-child(4) {
+		@media (max-width: 1137px) {
+			@apply pb-32;
+		}
+	}
+
+	&:nth-child(3) {
+		@apply my-14;
+	}
+}
